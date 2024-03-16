@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+        background-color: beige;
+        font-size: 13px;
+      }
+      label{
+        color:purple;
+      }
+      form {
+        margin-top: 40px;
+      }
+      .col {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+      }
+      .col .left {
+        width: 100px;
+      }
+      .col .right {
+        width: 30%;
+      }
+      table {
+        padding: 10px;
+      }
+      td {
+        margin: 20px;
+        padding: 2px 10px;
+        text-align: right;
+      }
+      tr {
+        margin: 10px;
+      }
+      input{
+        background-color: rgb(83, 198, 236);
+      }
+      .b-down {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bd-left,
+      .bd-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{% url 'details' %}" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <label for="search-equipment">Search Equipment Of</label>
+          <select name="equipment" id="search-equipment" style="width: 70px">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+          </select>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="equipment-no"> Equipment No.</label>
+            <input
+           
+              placeholder="0000001"
+              name="equipment No."
+              style="width: 70px"
+            />
+          </td>
+          <td colspan="3" style="text-align: left">
+            <label for="eqp.description">Eqp description</label>
+            <input
+             
+              placeholder="DEISEL GENERATOR SET(400 KVA) AT 33/11KV SUBSTATION RCF/RBL/LLJ"
+              name="eqp.description"
+              style="width: 400px"
+            />
+          </td>
+          <td>
+            <label for="Short Name"> Short Name</label>
+            <input
+              
+              name="Short Name"
+              style="width: 100px"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Shop No."> Shop No.</label>
+            <select name="shop No." id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Bay"> Bay</label>
+            <input  name="bay" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Column"> Column</label>
+            <input  name="column" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Section">Section</label>
+            <select name="section" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Sec.ELN">Sec.ELN</label>
+            <select name="sec.ELN" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Eqp.Type">Eqp.Type</label>
+            <select name="eqp.Type" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+          <td>
+            <div class="col">
+              <div class="left">
+                <label for="M/c Se.No.Alloted by Mgf">M/c Se.No.</label>
+                <label for="M/c Se.No.Alloted by Mgf">Alloted by Mgf</label>
+              </div>
+              <div class="right">
+                <input
+                  
+                  name="m/c Se.No.Alloted by Mgf"
+                  style="width: 70px"
+                />
+              </div>
+            </div>
+          </td>
+          <td>
+            <label for=" M/c Model No."> M/c Model No.</label>
+            <input  name="m/c Model No." style="width: 70px" />
+          </td>
+          <td>
+            <label for="Critical Level-1">Critical Level-1</label>
+            <select name="critical Level-1" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+            <label for="List">List</label>
+            <select name="list" id="shop-no" style="width: 18px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Level-2">Level-2</label>
+            <select name="level-2" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+            <label for="List">List</label>
+            <select name="list" id="shop-no" style="width: 18px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Manufacturer Code">Manufacturer Code</label>
+            <select name="manufacturer Code" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Supplier Code">Supplier Code</label>
+            <select name="supplier Code" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Indian Agent">Indian Agent</label>
+            <select name="indian Agent" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Make">Make</label>
+            <select name="make" id="shop-no" style="width: 80px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
+            <input name="cost in Rs. Lakh" style="width: 70px" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="PO No."> PO No.</label>
+            <input name="shop No." id="shop-no" style="width: 90px" />
+          </td>
+
+          <td>
+            <label for="PO Date">PO Date</label>
+            <input name="pO Date" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Unit Code"> Unit Code</label>
+            <input  name="unit Code" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Cost">Cost</label>
+            <input  name="cost" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
+            <input  name="cost in Rs. Lakh" style="width: 70px" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Manufacturer Code"> Manufacturer Code</label>
+            <select name="manufacturer Code" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Supplier Code">Supplier Code</label>
+            <select name="supplier Code" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Indian Agent">Indian Agent</label>
+            <select name="indian Agent" id="shop-no" style="width: 70px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Make">Make</label>
+            <select name="make" id="shop-no" style="width: 80px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
+            <input name="cost in Rs. Lakh" style="width: 70px" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Received Date">Received Date</label>
+            <input name="received Date" id="shop-no" style="width: 90px" />
+          </td>
+
+          <td>
+            <label for="Date of Commisioning">Date of Commisioning</label>
+            <input
+              type="number"
+              name="date of Commisioning"
+              style="width: 70px"
+            />
+          </td>
+
+          <td>
+            <label for="PTC Issued Date">PTC Issued Date</label>
+            <input name="pTC Issued Date" style="width: 70px" />
+          </td>
+
+          <td>
+            <div class="col">
+              <div class="left">
+                <label
+                  for="Warranty (from the date of commisioning and proving out of MnP)"
+                  >Warranty (from the date of commisioning and proving out of
+                  MnP)</label
+                >
+              </div>
+              <div class="right">
+                <input name="warranty" style="width: 70px" />
+              </div>
+            </div>
+          </td>
+
+          <td>
+            <label for="AMC Covered or Not in PO"
+              >AMC Covered or Not in PO</label
+            >
+            <select name="aMC" id="shop-no" style="width: 80px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="Type of AMC">Type of AMC</label>
+            <select name="type of AMC" id="shop-no" style="width: 80px">
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="Validity of AMC Date">Validity of AMC Date</label>
+            <input
+              
+              name="date of Commisioning"
+              style="width: 70px"
+            />
+          </td>
+
+          <td>
+            <label for="PTC Issued Date">PTC Issued Date</label>
+            <input  name="pTC Issued Date" style="width: 70px" />
+          </td>
+
+          <td>
+            <label for="Recovery Value in warranty period"
+              >Recovery Value in warranty period</label
+            >
+            <input
+              name="recovery Value in warranty period"
+              id="shop-no"
+              style="width: 80px"
+            />
+          </td>
+
+          <td>
+            <label for="%Age availability in waranty period"
+              >%Age availability in waranty period</label
+            >
+            <input name="age availability" id="shop-no" style="width: 70px"/>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="text-align: left">
+            <label for="Specialization">Specialization</label>
+            <input
+              name="specialization"
+              type="text"
+              style="width: 400px; height: 70px"
+            />
+          </td>
+          <td rowspan="3">
+            <div class="info2">
+              <label for="machine Picture">Machine Picture</label>
+              <input
+                type="image"
+                name="machine Picture"
+                style="width: 150px; height: 150px;background-color: white;"
+              />
+            </div>
+          </td>
+          <td rowspan="3">
+            <div class="info2">
+              <label for="PO Copy">PO Copy</label>
+              <input 
+                type="image"
+                name="pO Copy"
+                style="width: 150px; height: 150px; background-color: white;"
+              />
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+          <div class="b-down">
+            <div class="bd-left">
+              <div class="info">
+                <label for="Accumulated_depreciation_till"
+                  >Accumulated_depreciation_till</label
+                >
+                <input 
+                  name="accumulated_depreciation_till"
+                  id="shop-no"
+                  style="width: 70px;"
+                />
+              </div>
+              <div class="info">
+                <label for="Net_Book_Value_as_on_dt"
+                  >Net_Book_Value_as_on_dt</label
+                >
+                <input
+                  name="net_Book_Value_as_on_dt"
+                  id="shop-no"
+                  style="width: 70px"
+                />
+              </div>
+
+              <div class="info">
+                <label for="Give_reference_of_the_vaiable"
+                  >Give_reference_of_the_vaiable</label
+                >
+                <input
+                  name="give_reference_of_the_vaiable"
+                  id="shop-no"
+                  style="width: 70px"
+                />
+              </div>
+
+              <div class="info">
+                <label for="Current_Market_value"
+                  >Current_Market_value(if available)</label
+                >
+                <input
+                  name="current_Market_value"
+                  id="shop-no"
+                  style="width: 70px"
+                />
+              </div>
+            </div>
+            <div class="bd-right">
+              <div class="info">
+                <label for="Net_Book_Value_as_on_dt"
+                  >Net_Book_Value_as_on_dt</label
+                >
+                <input name="net_Book_Value_as_on_dt" style="width: 70px" />
+              </div>
+
+              <div class="info">
+                <label for="Whether_Surplus">Whether_Surplus</label>
+                <input name="whether_Surplus" style="width: 70px" />
+              </div>
+
+              <div class="info">
+                <label for="Accumulated_depreciation_till"
+                  >Accumulated_depreciation_till</label
+                >
+                <input
+                  name="accumulated_depreciation_till"
+                  id="shop-no"
+                  style="width: 70px"
+                />
+              </div>
+            </div>
+          </div>
+        </td>
+        </tr>
+        <tr>
+          <td>
+          <button style="background-color:blue; padding:3px;border:none;color:white;"type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
