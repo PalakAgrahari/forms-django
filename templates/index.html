@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width = device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
       * {
@@ -57,7 +57,7 @@
     </style>
   </head>
   <body>
-    <form action="{% url 'details' %}" method="post">
+    <form action="{% url 'saveform' %}" method="post">
       {% csrf_token %}
       <table>
         <tr>
@@ -74,7 +74,7 @@
             <input
            
               placeholder="0000001"
-              name="equipment No."
+              name="equipment_No"
               style="width: 70px"
             />
           </td>
@@ -83,16 +83,13 @@
             <input
              
               placeholder="DEISEL GENERATOR SET(400 KVA) AT 33/11KV SUBSTATION RCF/RBL/LLJ"
-              name="eqp.description"
+              name="eqp_description"
               style="width: 400px"
             />
           </td>
           <td>
             <label for="Short Name"> Short Name</label>
-            <input
-              
-              name="Short Name"
-              style="width: 100px"
+            <input name="Short_Name" style="width: 100px"
             />
           </td>
         </tr>
@@ -100,7 +97,7 @@
         <tr>
           <td>
             <label for="Shop No."> Shop No.</label>
-            <select name="shop No." id="shop-no" style="width: 70px">
+            <select name="shop_No" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -126,7 +123,7 @@
 
           <td>
             <label for="Sec.ELN">Sec.ELN</label>
-            <select name="sec.ELN" id="shop-no" style="width: 70px">
+            <select name="sec_ELN" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -136,7 +133,7 @@
         <tr>
           <td>
             <label for="Eqp.Type">Eqp.Type</label>
-            <select name="eqp.Type" id="shop-no" style="width: 70px">
+            <select name="eqpType" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -150,7 +147,7 @@
               <div class="right">
                 <input
                   
-                  name="m/c Se.No.Alloted by Mgf"
+                  name="mc_Se_No"
                   style="width: 70px"
                 />
               </div>
@@ -158,16 +155,16 @@
           </td>
           <td>
             <label for=" M/c Model No."> M/c Model No.</label>
-            <input  name="m/c Model No." style="width: 70px" />
+            <input  name="mc_Model" style="width: 70px" />
           </td>
           <td>
             <label for="Critical Level-1">Critical Level-1</label>
-            <select name="critical Level-1" id="shop-no" style="width: 70px">
+            <select name="Level1" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
-            <label for="List">List</label>
-            <select name="list" id="shop-no" style="width: 18px">
+            <label for="List1">List</label>
+            <select name="list1" id="shop-no" style="width: 18px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -175,12 +172,12 @@
 
           <td>
             <label for="Level-2">Level-2</label>
-            <select name="level-2" id="shop-no" style="width: 70px">
+            <select name="level2" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
-            <label for="List">List</label>
-            <select name="list" id="shop-no" style="width: 18px">
+            <label for="List2">List</label>
+            <select name="list2" id="shop-no" style="width: 18px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -190,7 +187,7 @@
         <tr>
           <td>
             <label for="Manufacturer Code">Manufacturer Code</label>
-            <select name="manufacturer Code" id="shop-no" style="width: 70px">
+            <select name="manufacturer_Code" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -198,7 +195,7 @@
 
           <td>
             <label for="Supplier Code">Supplier Code</label>
-            <select name="supplier Code" id="shop-no" style="width: 70px">
+            <select name="supplier_Code" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -206,7 +203,7 @@
 
           <td>
             <label for="Indian Agent">Indian Agent</label>
-            <select name="indian Agent" id="shop-no" style="width: 70px">
+            <select name="indian_Agent" id="shop-no" style="width: 70px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -221,25 +218,25 @@
           </td>
 
           <td>
-            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
-            <input name="cost in Rs. Lakh" style="width: 70px" />
+            <label for="Cost in Rs. Lakh1"> Cost in Rs. Lakh</label>
+            <input name="cost_in_Rs_Lakh1" style="width: 70px" />
           </td>
         </tr>
 
         <tr>
           <td>
             <label for="PO No."> PO No.</label>
-            <input name="shop No." id="shop-no" style="width: 90px" />
+            <input name="po_no" id="shop-no" style="width: 90px" />
           </td>
 
           <td>
             <label for="PO Date">PO Date</label>
-            <input name="pO Date" style="width: 70px" />
+            <input name="pO_Date" style="width: 70px" />
           </td>
 
           <td>
             <label for="Unit Code"> Unit Code</label>
-            <input  name="unit Code" style="width: 70px" />
+            <input  name="unit_Code" style="width: 70px" />
           </td>
 
           <td>
@@ -248,68 +245,31 @@
           </td>
 
           <td>
-            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
-            <input  name="cost in Rs. Lakh" style="width: 70px" />
+            <label for="Cost in Rs. Lakh2"> Cost in Rs. Lakh</label>
+            <input  name="cost_in_Lakh2" style="width: 70px" />
           </td>
         </tr>
 
-        <tr>
-          <td>
-            <label for="Manufacturer Code"> Manufacturer Code</label>
-            <select name="manufacturer Code" id="shop-no" style="width: 70px">
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-            </select>
-          </td>
-
-          <td>
-            <label for="Supplier Code">Supplier Code</label>
-            <select name="supplier Code" id="shop-no" style="width: 70px">
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-            </select>
-          </td>
-
-          <td>
-            <label for="Indian Agent">Indian Agent</label>
-            <select name="indian Agent" id="shop-no" style="width: 70px">
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-            </select>
-          </td>
-
-          <td>
-            <label for="Make">Make</label>
-            <select name="make" id="shop-no" style="width: 80px">
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-            </select>
-          </td>
-
-          <td>
-            <label for="Cost in Rs. Lakh"> Cost in Rs. Lakh</label>
-            <input name="cost in Rs. Lakh" style="width: 70px" />
-          </td>
-        </tr>
+        
 
         <tr>
           <td>
             <label for="Received Date">Received Date</label>
-            <input name="received Date" id="shop-no" style="width: 90px" />
+            <input name="received_Date" id="shop-no" style="width: 90px" />
           </td>
 
           <td>
             <label for="Date of Commisioning">Date of Commisioning</label>
             <input
-              type="number"
-              name="date of Commisioning"
+              
+              name="date_of_Commisioning"
               style="width: 70px"
             />
           </td>
 
           <td>
             <label for="PTC Issued Date">PTC Issued Date</label>
-            <input name="pTC Issued Date" style="width: 70px" />
+            <input name="pTC_Issued_Date" style="width: 70px" />
           </td>
 
           <td>
@@ -341,7 +301,7 @@
         <tr>
           <td>
             <label for="Type of AMC">Type of AMC</label>
-            <select name="type of AMC" id="shop-no" style="width: 80px">
+            <select name="type_of_AMC" id="shop-no" style="width: 80px">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
@@ -349,26 +309,19 @@
 
           <td>
             <label for="Validity of AMC Date">Validity of AMC Date</label>
-            <input
-              
-              name="date of Commisioning"
-              style="width: 70px"
-            />
+            <input name="validity" style="width: 70px"/>
           </td>
 
-          <td>
-            <label for="PTC Issued Date">PTC Issued Date</label>
-            <input  name="pTC Issued Date" style="width: 70px" />
-          </td>
+          
 
           <td>
             <label for="Recovery Value in warranty period"
               >Recovery Value in warranty period</label
             >
             <input
-              name="recovery Value in warranty period"
+              name="recovery_value"
               id="shop-no"
-              style="width: 80px"
+              style="width:80px"
             />
           </td>
 
@@ -376,13 +329,13 @@
             <label for="%Age availability in waranty period"
               >%Age availability in waranty period</label
             >
-            <input name="age availability" id="shop-no" style="width: 70px"/>
+            <input name="age_availability" id="shop-no" style="width: 70px"/>
           </td>
         </tr>
 
         <tr>
           <td colspan="3" style="text-align: left">
-            <label for="Specialization">Specialization</label>
+            <label for="Specialization">Specification</label>
             <input
               name="specialization"
               type="text"
@@ -394,17 +347,17 @@
               <label for="machine Picture">Machine Picture</label>
               <input
                 type="image"
-                name="machine Picture"
+                name="machine_Picture"
                 style="width: 150px; height: 150px;background-color: white;"
               />
             </div>
           </td>
           <td rowspan="3">
             <div class="info2">
-              <label for="PO Copy">PO Copy</label>
+              <label for="PO_Copy">PO Copy</label>
               <input 
                 type="image"
-                name="pO Copy"
+                name="pO_Copy"
                 style="width: 150px; height: 150px; background-color: white;"
               />
             </div>
@@ -412,7 +365,7 @@
         </tr>
 
         <tr>
-            <td colspan="3">
+          <td colspan="3">
           <div class="b-down">
             <div class="bd-left">
               <div class="info">
@@ -426,11 +379,11 @@
                 />
               </div>
               <div class="info">
-                <label for="Net_Book_Value_as_on_dt"
+                <label for="Net_Book_Value_as_on_dt1"
                   >Net_Book_Value_as_on_dt</label
                 >
                 <input
-                  name="net_Book_Value_as_on_dt"
+                  name="net_Book_Value1"
                   id="shop-no"
                   style="width: 70px"
                 />
@@ -441,7 +394,7 @@
                   >Give_reference_of_the_vaiable</label
                 >
                 <input
-                  name="give_reference_of_the_vaiable"
+                  name="give_reference"
                   id="shop-no"
                   style="width: 70px"
                 />
@@ -460,10 +413,10 @@
             </div>
             <div class="bd-right">
               <div class="info">
-                <label for="Net_Book_Value_as_on_dt"
+                <label for="Net_Book_Value2"
                   >Net_Book_Value_as_on_dt</label
                 >
-                <input name="net_Book_Value_as_on_dt" style="width: 70px" />
+                <input name="net_Book_Value_as_on_dt2" style="width: 70px" />
               </div>
 
               <div class="info">
@@ -472,11 +425,11 @@
               </div>
 
               <div class="info">
-                <label for="Accumulated_depreciation_till"
-                  >Accumulated_depreciation_till</label
+                <label for="Remarks1"
+                  >Remarks1</label
                 >
                 <input
-                  name="accumulated_depreciation_till"
+                  name="Remarks1"
                   id="shop-no"
                   style="width: 70px"
                 />
@@ -485,11 +438,13 @@
           </div>
         </td>
         </tr>
+
         <tr>
           <td>
-          <button style="background-color:blue; padding:3px;border:none;color:white;"type="submit">Submit</button>
+          <button style="background-color:blue; padding:3px; border:none; color:white;" type="submit">Submit</button>
           </td>
         </tr>
+
       </table>
     </form>
   </body>
