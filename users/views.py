@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from users.models import formdata
+from users.models import Machine
 from .forms import signinForm
 
 def saveForm(request):
@@ -53,7 +53,8 @@ def saveForm(request):
         whether_Surplus = request.POST.get('give_reference')
         accumulated_depreciation_till =  request.POST.get('accumulated_depreciation_till')
 
-        en = formdata(equipment_No=emp_no,equipment=equipment,Short_Name=Short_Name,shop_No=shop_No,bay=bay,column=column,section=section,sec_ELN=sec_ELN,eqpType=eqpType,mc_Se_No=mc_Se_No,mc_Model=mc_Model,Level1=Level1,level2=level2,list1=list1,list2=list2,manufacturer_Code=manufacturer_Code,supplier_Code=supplier_Code,indian_Agent=indian_Agent,make=make,cost_in_Rs_Lakh1=cost_in_Rs_Lakh1,pO_Date=pO_Date,unit_Code=unit_Code,cost=cost,cost_in_Lakh2=cost_in_Lakh2,received_Date=received_Date,date_of_Commisioning=date_of_Commisioning,pTC_Issued_Date=pTC_Issued_Date,warranty=warranty,aMC=aMC,validity=validity,type_of_AMC=type_of_AMC,recovery_value=recovery_value,age_availability=age_availability,specialization=specialization,machine_Picture=machine_Picture,pO_Copy=pO_Copy,accumulated_depreciation_till=accumulated_depreciation_till,net_Book_Value1=net_Book_Value1,give_reference=give_reference,current_Market_value=current_Market_value,net_Book_Value2=net_Book_Value2,whether_Surplus=whether_Surplus,Remarks1=Remarks1)
+        en = Machine(equipment_No=emp_no,equipment=equipment,Short_Name=Short_Name,shop_No=shop_No,bay=bay,column=column,section=section,sec_ELN=sec_ELN,eqpType=eqpType,mc_Se_No=mc_Se_No,mc_Model=mc_Model,Level1=Level1,level2=level2,list1=list1,list2=list2,manufacturer_Code=manufacturer_Code,supplier_Code=supplier_Code,indian_Agent=indian_Agent,make=make,cost_in_Rs_Lakh1=cost_in_Rs_Lakh1,pO_Date=pO_Date,unit_Code=unit_Code,cost=cost,cost_in_Lakh2=cost_in_Lakh2,received_Date=received_Date,date_of_Commisioning=date_of_Commisioning,pTC_Issued_Date=pTC_Issued_Date,warranty=warranty,aMC=aMC,validity=validity,type_of_AMC=type_of_AMC,recovery_value=recovery_value,age_availability=age_availability,specialization=specialization,machine_Picture=machine_Picture,pO_Copy=pO_Copy,accumulated_depreciation_till=accumulated_depreciation_till,net_Book_Value1=net_Book_Value1,give_reference=give_reference,current_Market_value=current_Market_value,net_Book_Value2=net_Book_Value2,whether_Surplus=whether_Surplus,Remarks1=Remarks1)
+        # en = Machine()
         en.save()
         return render(request,"index.html")
     # return render(request,"index.html")

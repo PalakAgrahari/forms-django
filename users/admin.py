@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import formdata
+from .models import Machine
 
 
-admin.site.register(formdata)
+admin.site.register(Machine)
 

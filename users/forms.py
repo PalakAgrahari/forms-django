@@ -1,5 +1,5 @@
 from django import forms 
-from .models import formdata
+from .models import Machine
 
 class signinForm(forms.Form):
     CHOICE = [

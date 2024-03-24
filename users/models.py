@@ -1,12 +1,12 @@
 from django.db import models
-
+from datetime import datetime
 # CHOICES = (
-#            ('dog','Dog'),
-#            ('cat','Cat'),
-#         )
+#            ('dog','Dog',default=""),
+#            ('cat','Cat',default=""),
+#         ,default="")
 
-# class signin(models.Model):
-#     search-equipment = models.CharField(max_length=3,widget=models.Select(choices = CHOICES))
+# class signin(models.Model,default=""):
+#     search-equipment = models.CharField(max_length=500,max_length=3,widget=models.Select(choices = CHOICES,default=""),default="")
 
 
     # equipment No.= 
@@ -50,55 +50,55 @@ from django.db import models
     # whether_Surplus = 
     # accumulated_depreciation_till = 
 
-class formdata(models.Model):
-    equipment_No =  models.IntegerField(null=False,blank = False),
-    equipment = models.CharField(null=False,blank = False),
-    eqp_description = models.CharField(null = False,blank = False,max_length = 50),
-    Short_Name = models.CharField(null = False,blank = False,max_length = 50),
-    shop_No = models.CharField(null=False,blank = False),
-    bay = models.CharField(null=False,blank = False),
-    column = models.CharField(null=False,blank = False),
-    section = models.CharField(null=False,blank = False),
-    sec_ELN = models.CharField(null=False,blank = False),
-    eqpType = models.CharField(null=False,blank = False),
-    mc_Se_No = models.CharField(null=False,blank = False),
-    mc_Model = models.CharField(null=False,blank = False),
-    Level1 = models.CharField(null=False,blank = False),
-    level2 = models.CharField(null=False,blank = False),
-    list1 = models.CharField(null=False,blank = False),
-    list2 = models.CharField(null=False,blank = False),
-    manufacturer_Code = models.CharField(null=False,blank = False),
-    supplier_Code = models.CharField(null=False,blank = False),
-    indian_Agent = models.CharField(null=False,blank = False),
-    make = models.CharField(null=False,blank = False),
-    cost_in_Rs_Lakh1 = models.CharField(null=False,blank = False),
-    po_no = models.IntegerField(null=False,blank = False),
+class Machine(models.Model):
+    equipment_No =  models.IntegerField(null=False,blank = False,default=1)
+    equipment = models.CharField(max_length=500,null=False,blank = False,default="")
+    eqp_description = models.CharField(max_length=500,null = False,blank = False,default="")
+    Short_Name = models.CharField(max_length=500,null = False,blank = False,default="")
+    shop_No = models.CharField(max_length=500,null=False,blank = False,default="")
+    bay = models.CharField(max_length=500,null=False,blank = False,default="")
+    column = models.CharField(max_length=500,null=False,blank = False,default="")
+    section = models.CharField(max_length=500,null=False,blank = False,default="")
+    sec_ELN = models.CharField(max_length=500,null=False,blank = False,default="")
+    eqpType = models.CharField(max_length=500,null=False,blank = False,default="")
+    mc_Se_No = models.CharField(max_length=500,null=False,blank = False,default="")
+    mc_Model = models.CharField(max_length=500,null=False,blank = False,default="")
+    Level1 = models.CharField(max_length=500,null=False,blank = False,default="")
+    level2 = models.CharField(max_length=500,null=False,blank = False,default="")
+    list1 = models.CharField(max_length=500,null=False,blank = False,default="")
+    list2 = models.CharField(max_length=500,null=False,blank = False,default="")
+    manufacturer_Code = models.CharField(max_length=500,null=False,blank = False,default="")
+    supplier_Code = models.CharField(max_length=500,null=False,blank = False,default="")
+    indian_Agent = models.CharField(max_length=500,null=False,blank = False,default="")
+    make = models.CharField(max_length=500,null=False,blank = False,default="")
+    cost_in_Rs_Lakh1 = models.CharField(max_length=500,null=False,blank = False,default="")
+    po_no = models.IntegerField(null=False,blank = False,default=1)
     
 
-    pO_Date = models.DateField(null=False,blank = False),
-    unit_Code = models.CharField(null=False,blank = False),
-    cost = models.CharField(null=False,blank = False),
-    cost_in_Lakh2 = models.IntegerField(null=False,blank = False),
+    pO_Date = models.DateField(null=False,blank = False,default=datetime.now())
+    unit_Code = models.CharField(max_length=500,null=False,blank = False,default="")
+    cost = models.CharField(max_length=500,null=False,blank = False,default="")
+    cost_in_Lakh2 = models.IntegerField(null=False,blank = False,default=1)
     
-    received_Date = models.DateField(null=False,blank = False),
-    date_of_Commisioning = models.DateField(null=False,blank = False),
-    pTC_Issued_Date = models.CharField(null=False,blank = False),
-    warranty = models.CharField(null=False,blank = False),
-    aMC = models.CharField(null=False,blank = False),
-    type_of_AMC = models.CharField(null=False,blank = False),
-    validity = models.CharField(null=False,blank = False),
-    recovery_value = models.CharField(null=False,blank = False),
-    age_availability = models.CharField(null=False,blank = False),
-    specialization = models.TextField(null=False,blank = False), 
-    machine_Picture = models.ImageField(upload_to=None, height_field=None, width_field=None),
-    pO_Copy = models.ImageField(upload_to=None),
-    accumulated_depreciation_till = models.CharField(null=False,blank = False),
-    net_Book_Value1 = models.CharField(null=False,blank = False),  
-    give_reference =  models.CharField(null=False,blank = False),  
-    current_Market_value = models.CharField(null=False,blank = False),
-    net_Book_Value2 = models.CharField(null=False,blank = False),
-    whether_Surplus = models.CharField(null=False,blank = False),
-    Remarks1 = models.CharField(null=False,blank = False),
+    received_Date = models.DateField(null=False,blank = False,default="")
+    date_of_Commisioning = models.DateField(null=False,blank = False,default="")
+    pTC_Issued_Date = models.CharField(max_length=500,null=False,blank = False,default="")
+    warranty = models.CharField(max_length=500,null=False,blank = False,default="")
+    aMC = models.CharField(max_length=500,null=False,blank = False,default="")
+    type_of_AMC = models.CharField(max_length=500,null=False,blank = False,default="")
+    validity = models.CharField(max_length=500,null=False,blank = False,default="")
+    recovery_value = models.CharField(max_length=500,null=False,blank = False,default="")
+    age_availability = models.CharField(max_length=500,null=False,blank = False,default="")
+    specialization = models.TextField(null=False,blank = False,default="")
+    machine_Picture = models.ImageField(upload_to=None, height_field=None, width_field=None,default="")
+    pO_Copy = models.ImageField(upload_to=None,default="")
+    accumulated_depreciation_till = models.CharField(max_length=500,null=False,blank = False,default="")
+    net_Book_Value1 = models.CharField(max_length=500,null=False,blank = False,default="") 
+    give_reference =  models.CharField(max_length=500,null=False,blank = False,default="") 
+    current_Market_value = models.CharField(max_length=500,null=False,blank = False,default="")
+    net_Book_Value2 = models.CharField(max_length=500,null=False,blank = False,default="")
+    whether_Surplus = models.CharField(max_length=500,null=False,blank = False,default="")
+    Remarks1 = models.CharField(max_length=500,null=False,blank = False,default="")
     
     
     
