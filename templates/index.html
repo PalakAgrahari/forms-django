@@ -70,7 +70,7 @@
 </head>
 
 <body>
-  <form action="{% url "saveform" %}" method="post">{% csrf_token %}
+  <form action="{% url "saveform" %}" method="post" enctype="multipart/form-data">{% csrf_token %}
     <table>
       <tr>
         <label for="search-equipment">Search Equipment Of</label>
@@ -323,13 +323,13 @@
         <td rowspan="3">
           <div class="info2">
             <label for="machine Picture">Machine Picture</label>
-            <input type="file" name="machine_Picture" style="width: 150px; height: 150px;background-color: white;" />
+            <input type="file" name="machine_Picture" id="machine_Picture" style="width: 150px; height: 150px;background-color: white;" accept="image/*"/>
           </div>
         </td>
         <td rowspan="3">
           <div class="info2">
             <label for="PO_Copy">PO Copy</label>
-            <input type="file" name="pO_Copy" style="width: 150px; height: 150px; background-color: white;" />
+            <input type="file" name="pO_Copy" id="pO_Copy" style="width: 150px; height: 150px; background-color: white;" accept="image/*" />
           </div>
         </td>
       </tr>

@@ -51,8 +51,10 @@ def saveForm(request):
         age_availability = request.POST.get('age_availability', "")
         specialization = request.POST.get('specialization', "")
         
-        machine_Picture = request.FILES.get('machine_Picture', "")
-        pO_Copy = request.FILES.get('pO_Copy', "")
+        machine_Picture = request.FILES.get('machine_Picture')
+        print(machine_Picture)
+        pO_Copy = request.FILES.get('pO_Copy')
+        print(pO_Copy)
 
         accumulated_depreciation_till = request.POST.get('accumulated_depreciation_till', "")
         net_Book_Value1 = request.POST.get('net_Book_Value1', "")
